@@ -1,0 +1,97 @@
+/*! [PROJECT_NAME] | Suitmedia */
+
+//	1. Font-face
+//	2. Basic styles
+//	3. Header
+//	4. Page styles
+//	5. Footer
+
+@import "partial/normalize";
+@import "partial/variables";
+@import "partial/resets";
+@import "partial/helpers";
+@import "partial/print";
+
+@import "mixin/mixin";
+@import "modules/modules";
+@import "plugin/plugin";
+
+// 1 Font-face
+// ------------------------------------------------------------------------ //
+
+
+
+// 2 Basic styles
+// ------------------------------------------------------------------------ //
+
+html {
+    font: 400 $base_font_size $base_font_family;
+    line-height: $base_line_height;
+}
+
+body {
+    text-decoration-skip: ink;
+    color: $black70;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+
+	&:hover,
+    &:focus {
+		color: $link_hover;
+	}
+}
+
+button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.block {
+    margin-bottom: $space;
+}
+
+.block-half {
+    margin-bottom: ($space / 2);
+}
+
+.container {
+    width: 92%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media #{$medium} {
+        width: 94%;
+    }
+
+    @media #{$extra_large} {
+        max-width: 1280px;
+    }
+}
+
+// 3 Header
+// ------------------------------------------------------------------------ //
+
+
+// 4 Page styles
+// ------------------------------------------------------------------------ //
+.position {
+    @include objDimension(100%,  auto);
+    @include objPos(top,  left);
+    @include fontSize(69);
+    position: relative;
+    color: palette('light-grey');
+
+    &:after {
+        content: '';
+        @include triangle(left, top, bottom, 12px, $black);
+    }
+}
+
+// 5 Footer
+// ------------------------------------------------------------------------ //

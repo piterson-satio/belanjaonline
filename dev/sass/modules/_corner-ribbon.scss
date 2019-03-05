@@ -1,0 +1,30 @@
+.corner-ribbon {
+    width: 180px;
+    background: #e43;
+    position: absolute;
+    top: 25px;
+    left: -50px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+
+    .absolute {
+        position: absolute;
+    }
+
+    .shadow {
+        box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    }
+
+    .top-right {
+        background-color: rgb(80, 80, 80);
+        top: 25px;
+        right: -50px;
+        left: auto;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}
